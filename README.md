@@ -1,4 +1,6 @@
-# LuasStops
+# luas-stops
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a04d78f8-9061-4904-a0d3-5696cebd6e4d/deploy-status)](https://app.netlify.com/sites/luas-stops/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
