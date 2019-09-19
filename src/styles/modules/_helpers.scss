@@ -1,0 +1,59 @@
+@import 'variables';
+
+.mt-20 {
+  margin-top: 20px!important;
+}
+
+.mb-20 {
+  margin-bottom: 20px!important;
+}
+
+.mr-20 {
+  margin-right: 20px!important;
+}
+
+.c-p {
+  color: $primary!important;
+}
+
+.leap {
+  color: green!important;
+}
+
+.loader {
+  display: inline-block;
+  width: 26px;
+  height: 32px;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-color: white transparent white transparent;
+    animation: loader-ring 1.2s linear infinite;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 42px;
+    height: 32px;
+
+    &:after {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+@keyframes loader-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

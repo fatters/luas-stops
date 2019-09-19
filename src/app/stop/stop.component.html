@@ -1,0 +1,50 @@
+<div class="luas-stop luas-page">
+  <section class="luas-stop__info">
+    <div class="luas-container">
+      <h1 class="luas-stop__info__title">{{stop.name}}</h1>
+      <h2 *ngIf="distance === ''" class="luas-stop__info__sub-title"><span class="loader mr-20"></span>Loading distance from your location</h2>
+      <h2 *ngIf="distance !== ''" class="luas-stop__info__sub-title">{{distance | number}}km from current location</h2>
+    </div>
+  </section>
+
+  <div class="luas-page__content">
+    <div class="luas-container">
+
+      <p *ngIf="parkAndRide">{{parkAndRide}}</p>
+      <p *ngIf="cycleRide">{{cycleRide}}</p>
+
+      <p>Please note that the below times are what is displayed on the Luas stop boards and may be incorrect.</p>
+
+      <div class="luas-table" *ngIf="this.stop.trams.length > 0">
+        <h2 class="luas-table__title">Inbound</h2>
+        <div class="luas-table__header">
+          <div class="luas-table__header__item">Destination</div>
+          <div class="luas-table__header__item">Minutes</div>
+        </div>
+
+        <div class="luas-table__body">
+          <div class="luas-table__body__item" *ngFor="let tram of inbound">
+            <div class="luas-table__body__item__inner">{{tram.destination}}</div>
+            <div class="luas-table__body__item__inner">{{tram.due}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="luas-table" *ngIf="this.stop.trams.length > 0">
+        <h2 class="luas-table__title">Outbound</h2>
+        <div class="luas-table__header">
+          <div class="luas-table__header__item">Destination</div>
+          <div class="luas-table__header__item">Minutes</div>
+        </div>
+
+        <div class="luas-table__body">
+          <div class="luas-table__body__item" *ngFor="let tram of outbound">
+            <div class="luas-table__body__item__inner">{{tram.destination}}</div>
+            <div class="luas-table__body__item__inner">{{tram.due}}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

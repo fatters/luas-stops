@@ -1,0 +1,41 @@
+@import '../modules/variables';
+
+.times-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 20px 10px;
+  }
+
+  thead {
+    color: $primary;
+    font-weight: 600;
+  }
+
+  thead td {
+    text-align: center;
+  }
+
+  tbody td {
+    border-top: 1px solid #e3e3e3;
+  }
+
+  tbody td:not(.c-p) {
+    text-align: right;
+  }
+
+  @media screen and (max-width: 767px) {
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import './styles/modules/variables';
+@import './styles/modules/reset';
+@import './styles/modules/scaffold';
+
+@import './styles/components/header';
+@import './styles/components/footer';
+@import './styles/components/forms';
+@import './styles/components/home';
+@import './styles/components/stop';
+@import './styles/components/times';
+
+@import './styles/modules/helpers';

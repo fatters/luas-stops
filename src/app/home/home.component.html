@@ -1,0 +1,26 @@
+<div class="luas-container luas-page">
+
+  <div class="luas-page__content">
+
+    <section class="luas-line luas-line--red">
+      <p *ngIf="redLineStatus$ | async as redLineStatus; else loadRed">{{redLineStatus}}</p>
+      <ng-template #loadRed><span class="loader"></span> Loading Red Line status...</ng-template>
+    </section>
+
+    <section class="luas-line luas-line--green">{{greenLineStatus$ | async}}</section>
+
+
+
+    <input type="text" class="luas-form-control" [(ngModel)]="filtered" aria-label="Filter Luas Stops" placeholder="Filter stop by name e.g. Stillorgan" />
+
+    <div class="mt-20" *ngIf="(stops$ | async | FilterItemPipe: filtered)?.length < 1">No items can be found with that filter.</div>
+
+    <ul class="luas-home-list">
+      <li class="luas-home-list__item" *ngFor="let stop of stops$ | async | FilterItemPipe: filtered">
+        <a [routerLink]="'/stop/' + stop.id.toLowerCase()">{{stop.name}}</a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>

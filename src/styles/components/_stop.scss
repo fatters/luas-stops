@@ -1,0 +1,27 @@
+.luas-stop__info {
+  background: #522398;
+  color: white;
+  padding: 40px 0;
+
+  &__title {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__sub-title {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 80px 0;
+
+    &__title {
+      font-size: 74px;
+    }
+
+    &__sub-title {
+      font-size: 32px;
+    }
+  }
+}

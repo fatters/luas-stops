@@ -1,0 +1,68 @@
+.luas-header {
+  border-top: 4px solid #522398;
+  padding: 15px 0;
+  border-bottom: 1px solid #e3e3e3;
+
+  &__logo {
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+    color: #522398;
+    margin: 0;
+
+    > a {
+      text-decoration: none;
+    }
+  }
+
+  &__logo span {
+    display: block;
+  }
+
+  &__mobile-toggle {
+    float: right;
+    line-height: 31px;
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &__mobile-toggle {
+      display: none;
+    }
+  }
+}
+
+.luas-navigation {
+
+  @media screen and (max-width: 767px) {
+    background: white;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    transition: left 0.15s linear;
+
+    &--open {
+      left: 0;
+    }
+
+    &__item {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    float: right;
+    line-height: 31px;
+
+    &__item ~ .luas-navigation__item {
+      margin-left: 20px;
+    }
+  }
+}

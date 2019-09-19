@@ -1,0 +1,42 @@
+@import './_variables.scss';
+
+html,
+body {
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100vh;
+  border-bottom: 4px solid $primary;
+  position: relative;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+}
+
+p {
+  margin: 0;
+
+  ~ p {
+    margin-top: 20px;
+  }
+}

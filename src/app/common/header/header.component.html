@@ -1,0 +1,11 @@
+<header class="luas-header" role="banner">
+  <div class="luas-container">
+    <h1 class="luas-header__logo">
+      <a [routerLink]="'/'" (click)="navClose()"><span>Luas</span><span>Stops</span></a>
+    </h1>
+    <a (click)="navToggle()" class="luas-header__mobile-toggle">{{menuState}} Menu</a>
+<!--    <nav role="navigation" class="luas-navigation" [ngClass]="{'luas-navigation&#45;&#45;open': mobileMenuOpened}">-->
+<!--      <a href="/" (click)="navClose()" class="luas-navigation__item">Nav Item</a>-->
+<!--    </nav>-->
+  </div>
+</header>
